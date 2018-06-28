@@ -7,12 +7,165 @@
 
         <title>Biennale | Mapping-lab</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:300,400,700|EB+Garamond:400i,500i" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".project > a").click(function(event) {
+                    event.preventDefault();
+                    $(".modal img").attr("src", $(this).attr("href")).hide();
+                    $(".modal").show();
+                    $(".lds-default").show();
+                    $(".modal img").one("load", function() {
+                        $(".lds-default").hide();
+                        $(".modal img").show();
+                    }).each(function() {
+                      if(this.complete) $(this).load();
+                    });
+                });
+                $(".modal").click(function(event) {
+                    event.preventDefault();
+                    $(".modal").hide();
+                });
+            });
+        </script>
     </head>
     <body>
 
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a target="_new" href="https://www.mappinglab.me/">
+                        <img src="images/logo_header.svg" alt="Mapping Lab">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="mailto:hello@mappinglab.me"><img src="images/icon_email.svg" onmouseover="this.src='images/icon_email_hover.svg'" onmouseout="this.src='images/icon_email.svg'" alt="Email"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/mappinglab"><img src="images/icon_twitter.svg" onmouseover="this.src='images/icon_twitter_hover.svg'" onmouseout="this.src='images/icon_twitter.svg'" alt="Twitter"></a></li>
+                    <li><a target="_blank" href="https://medium.com/mappinglab"><img src="images/icon_medium.svg" onmouseover="this.src='images/icon_medium_hover.svg'" onmouseout="this.src='images/icon_medium.svg'" alt="Medium"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/mappinglab"><img src="images/icon_facebook.svg" onmouseover="this.src='images/icon_facebook_hover.svg'" onmouseout="this.src='images/icon_facebook.svg'" alt="Facebook"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/mappinglab.me/"><img src="images/icon_instagram.svg" onmouseover="this.src='images/icon_instagram_hover.svg'" onmouseout="this.src='images/icon_instagram.svg'" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="main-content">
+            <div class="container">
+                <h1>Case studies: Mapping urban data</h1>
+                <h2>Walls of Air / Muros de Ar</h2>
+                <h3>Brazilian Pavilion Catalogue at Biennale di Architettura di Venezia 2018</h3>
+
+                <div class="about">
+                    <p>
+                        This case study proposes a series of 10 maps with the theme "Walls of Air" developed
+                        and designed for the Brazilian Pavilion Catalogue at the Venice Biennale.
+                    </p>
+                    <p>
+                        This project was created as a complementation of the main exhibition maps as a way of
+                        visualizing differents forms of "Walls" resulted from the Brazil's urbanization processes.
+                    </p>
+                    <p>
+                        Each cartography includes several existing databases and researches articulated together
+                        with the curatorial team of the Brazilian Pavilion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="projects">
+                <div class="project project-2x2" style="background-image: url(images/projects/thumbnails/catalog-1.jpg);">
+                    <a href="images/projects/full/catalog-1.jpg">
+                        <div class="description">The map is not the territory</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-2.jpg);">
+                    <a href="images/projects/full/catalog-2.jpg">
+                        <div class="description">Succession of edges</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-3.jpg);">
+                    <a href="images/projects/full/catalog-3.jpg">
+                        <div class="description">Fluid landscape</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-4.jpg);">
+                    <a href="images/projects/full/catalog-4.jpg">
+                        <div class="description">Crossbreedings</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-5.jpg);">
+                    <a href="images/projects/full/catalog-5.jpg">
+                        <div class="description">Human flows</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-6.jpg);">
+                    <a href="images/projects/full/catalog-6.jpg">
+                        <div class="description">Material flows</div>
+                    </a>
+                </div>
+                <div class="project project-1x2" style="background-image: url(images/projects/thumbnails/catalog-10.jpg);">
+                    <a href="images/projects/full/catalog-10.jpg">
+                        <div class="description">The encryption of power</div>
+                    </a>
+                </div>
+                <div class="project project-2x1" style="background-image: url(images/projects/thumbnails/catalog-8.jpg);">
+                    <a href="images/projects/full/catalog-8.jpg">
+                        <div class="description">Inhabiting the house or the city?</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-9.jpg);">
+                    <a href="images/projects/full/catalog-9.jpg">
+                        <div class="description">Geography of the real estate market</div>
+                    </a>
+                </div>
+                <div class="project project-1x1" style="background-image: url(images/projects/thumbnails/catalog-7.jpg);">
+                    <a href="images/projects/full/catalog-7.jpg">
+                        <div class="description">Solid divisions</div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <h3>Sources</h3>
+                <ul>
+                    <li>Atlas of Human Development in Brazil</li>
+                    <li>Caixa Econômica Federal</li>
+                    <li>CAPES Coordenação de Aperfeiçoamento de Pessoal de Nível Superior</li>
+                    <li>CEM Centro de Estudos da Metrópole</li>
+                    <li>ESA European Space Agency</li>
+                    <li>IBGE Instituto Brasileiro de Geografia e Estatística</li>
+                    <li>GADM Global Admistrative Areas</li>
+                    <li>GFW Climate GLOBAL FOREST WATCH</li>
+                    <li>Inside Airbnb</li>
+                    <li>Instagram, Inc. API</li>
+                    <li>RAISG Rede Amazônica de Informação Socioambiental Georreferenciada</li>
+                    <li>SEADE Fundação Sistema Estadual de Análise de Dados</li>
+                    <li>SEDAC NASA Socioeconomic Data and Applications Center</li>
+                    <li>Trase</li>
+                </ul>
+                <h3>Technologies</h3>
+                <ul>
+                    <li>Excel</li>
+                    <li>Illustrator</li>
+                    <li>InDesign</li>
+                    <li>OpenRefine</li>
+                    <li>QGIS</li>
+                    <li>Photoshop</li>
+                    <li>PostgreSQL + GIS</li>
+                    <li>Python + Django</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" style="display: none">
+                <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <img src="">
+        </div>
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
